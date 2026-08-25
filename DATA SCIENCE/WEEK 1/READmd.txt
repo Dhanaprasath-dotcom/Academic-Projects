@@ -1,0 +1,96 @@
+Titanic Survival Data Analysis
+
+📌 Project Overview
+
+This project focuses on analyzing the Titanic passenger dataset to understand the survival patterns of passengers.
+
+Using Python and Pandas, the dataset is loaded, processed, filtered, and analyzed to identify the number of passengers who survived and those who did not survive.
+
+The project also includes a simple visualization to represent the survival distribution.
+
+---
+
+🎯 Objective
+
+The main objectives of this project are:
+
+- To load and understand the Titanic dataset.
+- To perform basic data preprocessing.
+- To identify passengers who survived.
+- To analyze the survival distribution.
+- To calculate the percentage of passengers who did not survive.
+- To visualize the survival results using a bar chart.
+
+---
+
+📊 Dataset
+
+The project uses the Titanic dataset stored in:
+
+`gender_submission.csv`
+
+The dataset contains information related to passenger survival.
+
+Important Columns
+
+| Column | Description |
+|--------|-------------|
+| PassengerId | Unique identification number of the passenger |
+| Survived | Indicates whether the passenger survived |
+
+Survival Values
+
+- `1` → Passenger survived
+- `0` → Passenger did not survive
+
+---
+
+🔍 Data Analysis
+
+The dataset is analyzed using Pandas.
+
+The `PassengerId` column is renamed to `Number` for easier understanding.
+
+The data is then filtered based on the `Survived` column to identify passengers who survived.
+
+The analysis also calculates the percentage of passengers who did not survive.
+
+---
+
+📈 Data Visualization
+
+A bar chart is created to visualize the number of passengers according to their survival status.
+
+The visualization helps in understanding the difference between:
+
+- Survived passengers
+- Non-survived passengers
+
+---
+📌 Result
+
+From the analysis performed in the notebook:
+
+63.64% of the passengers did not survive.
+
+The bar chart provides a visual representation of the survival distribution.
+
+---
+
+🛠️ Technologies Used
+
+- Python
+- Pandas
+- Matplotlib
+- Jupyter Notebook
+
+---
+
+📂 Project Structure
+
+```text
+Titanic-Survival-Data-Analysis/
+│
+├── gender.ipynb
+├── gender_submission.csv
+└── README.md

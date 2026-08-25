@@ -1,0 +1,47 @@
+Chennai Weather Data Analysis:
+==============================
+
+Simple exploratory notebook that loads historical weather data for Chennai (Madras) from 1990–2022, applies Min-Max and Standard scaling to numerical features, and visualizes the distribution of average temperature.
+
+Problem Statement:
+==================
+Weather datasets often contain numerical features on different scales. This project demonstrates basic preprocessing (normalization and standardization) and a quick distribution plot of average temperature (`tavg`).
+
+Target Users:
+=============
+Beginners in data science / machine learning who want a minimal example of feature scaling and histogram visualization with pandas, scikit-learn, and matplotlib.
+
+Technologies:
+=============
+- Python
+- pandas
+- scikit-learn (`MinMaxScaler`, `StandardScaler`)
+- matplotlib
+
+Features:
+=========
+- Load and inspect the weather CSV
+- Apply Min-Max scaling to numerical columns
+- Apply Standard scaling to numerical columns
+- Plot histogram of average temperature (`tavg`)
+
+Dataset:
+========
+File required: `Chennai_1990_2022_Madras.csv`
+
+Expected columns (from notebook):
+- `time`
+- `tavg` (average temperature)
+- `tmin` (minimum temperature)
+- `tmax` (maximum temperature)
+- `prcp` (precipitation)
+
+TODO: Information required – full dataset description, source, units, license, and missing-value handling.
+
+Installation & Setup:
+=====================
+
+1. Place `Chennai_1990_2022_Madras.csv` in the same directory as the notebook.
+2. Install dependencies:
+   ```bash
+   pip install pandas scikit-learn matplotlib

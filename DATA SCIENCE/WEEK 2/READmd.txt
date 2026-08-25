@@ -1,0 +1,179 @@
+🌦️ Bangalore City Weather Analysis (1990–2022)
+=================================================
+            > A data-driven analysis of historical weather patterns in Bangalore using Python, Pandas,
+and Matplotlib.
+
+---
+
+📌 Overview:
+=============
+
+        Weather conditions play an important role in understanding the environmental characteristics of a city over time.
+
+This project analyzes historical weather data for **Bangalore City from 1990 to 2022. The analysis focuses on preparing the weather dataset, 
+handling missing observations, extracting meaningful date-based information, and studying the "year-wise average temperature".
+
+
+
+The project follows a simple and practical Data Science workflow:
+===================================================================
+
+Data Collection → Data Cleaning → Data Preprocessing → Feature Extraction → Aggregation → Visualization
+
+
+
+
+                ┌──────────────────────┐
+                │  Weather CSV Dataset │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │   Data Inspection    │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │ Missing Value Check  │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │   Data Cleaning      │
+                │   Mean Imputation    │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │  Date Conversion     │
+                │ Year / Month / Day   │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │ Year-wise Aggregation│
+                │ Average Temperature │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │  Results & Analysis  │
+                └──────────────────────┘
+
+
+
+---
+
+🎯 Project Objective:
+========================
+
+The primary objective of this project is to analyze historical temperature data and understand how Bangalore's average temperature has varied across different years.
+
+Key objectives:
+===============
+
+- Load and inspect the Bangalore weather dataset.
+- Identify missing values in the weather observations.
+- Handle missing numerical values using mean imputation.
+- Convert the date column into a proper datetime format.
+- Extract year, month, and day from the date.
+- Calculate the average temperature for each year.
+- Present the yearly temperature results in a structured form.
+- Visualize the historical temperature pattern.
+
+---
+
+📂 Dataset:
+=============
+
+The project uses the following dataset:
+
+`Bangalore_1990_2022_BangaloreCity.csv`**
+
+The dataset contains historical weather observations for Bangalore City.
+
+Weather Variables
+
+| Column | Description |
+|---|---|
+| `time` | Date of the weather observation |
+| `tavg` | Average temperature |
+| `tmin` | Minimum temperature |
+| `tmax` | Maximum temperature |
+| `prcp` | Precipitation |
+
+The analysis covers the period from **1990 to 2022**. :contentReference[oaicite:3]{index=3}
+
+---
+
+🔍 Data Quality Check:
+=======================
+
+Before performing the analysis, the dataset is checked for missing values.
+
+The initial missing-value check identified:
+
+| Column | Missing Values |
+|---|---:|
+| `time` | 0 |
+| `tavg` | 70 |
+| `tmin` | 1389 |
+| `tmax` | 629 |
+| `prcp` | 4620 |
+
+This check helps identify incomplete observations before further processing. :contentReference[oaicite:4]{index=4}
+
+---
+
+🧹 Data Cleaning:
+==================
+
+Missing values in the numerical weather columns are handled using **mean imputation**.
+
+The following columns are processed:
+
+- `tavg`
+- `tmax`
+- `tmin`
+- `prcp`
+
+Each missing value is replaced with the mean of its respective column.
+
+After preprocessing, the missing-value check shows zero missing values in these columns. :contentReference[oaicite:5]{index=5}
+
+Why Mean Imputation?
+
+Mean imputation provides a simple way to replace missing numerical observations while retaining the existing records in the dataset.
+
+---
+
+📅 Date Feature Engineering:
+=============================
+
+The `time` column is converted from text into a datetime format.
+
+Three additional features are then extracted:
+
+```python
+weather['year'] = weather['time'].dt.year
+weather['month'] = weather['time'].dt.month
+weather['day'] = weather['time'].dt.day
+
+
+
+💡 Key Learning Outcomes:
+===========================
+
+Through this project, the following Data Science concepts are demonstrated:
+
+Reading CSV datasets using Pandas
+Understanding dataset structure
+Detecting missing values
+Handling missing data
+Datetime conversion
+Feature extraction from dates
+GroupBy operations
+Mean aggregation
+Basic statistical analysis
+Preparing data for visualization
+Interpreting time-based data

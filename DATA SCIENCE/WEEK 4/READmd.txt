@@ -1,0 +1,40 @@
+Customer Segmentation with K-Means:
+===================================
+
+Minimal educational notebook that demonstrates K-Means clustering on a small synthetic customer dataset using Annual Income and Spending Score.
+
+## Problem Statement
+Customer data often needs to be grouped into meaningful segments. This project shows the basic steps of feature scaling and applying K-Means to create three customer clusters.
+
+## Target Users
+Beginners learning unsupervised machine learning and scikit-learn.
+
+## Technologies
+- Python
+- pandas
+- scikit-learn (`StandardScaler`, `KMeans`)
+- matplotlib (imported; visualization not yet implemented)
+
+## Features
+- Create a 10-row synthetic dataset of Annual Income and Spending Score
+- Scale the features with StandardScaler
+- Fit K-Means with 3 clusters (`random_state=42`)
+- Assign cluster labels and inspect each group
+
+## Dataset
+Hard-coded inside the notebook (10 samples):
+
+| Annual Income | Spending Score |
+|---------------|----------------|
+| 33            | 90             |
+| 44            | 98             |
+| …             | …              |
+
+**TODO: Information required** – real dataset source or larger sample if desired.
+
+## Installation & Setup
+
+1. Install dependencies:
+   ```bash
+   pip install pandas scikit-learn matplotlib
+
